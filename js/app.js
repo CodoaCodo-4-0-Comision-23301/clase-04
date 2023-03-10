@@ -48,10 +48,19 @@ class Button {
         button.innerHTML = this.text;
         app.appendChild(button);
       }
+    
 }
-
+  const btnLike = document.getElementById('app');
+      const likesCounter = document.getElementById('likes-counter');
+      
+      let likes = 0;
+      
+      btnLike.addEventListener('click', function() {
+        likes++;
+        likesCounter.textContent = likes;
+      });
 // Crear instancia del botón con parentID y text
-const myButton = new Button("app", "Dame un Like");
+const myButton = new Button("app", "Like");
 
 // Llamar el método render
 myButton.render()
